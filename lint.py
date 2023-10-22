@@ -227,9 +227,10 @@ def check_file(file_path: str, disable_line_length_checks: bool = True) -> int:
                     error_count += 1
 
             # Check for any alphanumeric character followed by a {
-            if character_brace_pattern.search(line):
-                print(f"{rb}Error, {filename}:{i+1}: Character followed by a brace{fe}")
-                error_count += 1
+            if file_type == FileType.JAVA or file_type == FileType.KOTLIN or file_type == FileType.SWIFT:
+                if character_brace_pattern.search(line):
+                    print(f"{rb}Error, {filename}:{i+1}: Character followed by a brace{fe}")
+                    error_count += 1
 
 
     # Load the file as string
