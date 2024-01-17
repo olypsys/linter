@@ -1,7 +1,7 @@
 #
 # A basic linting script for C++, Java, Kotlin and Swift files, specific to Olypsys Technologies Ltd.
 #
-# Copyright (c) 2023 Olypsys Technologies Ltd. All rights reserved.
+# Copyright (c) 2024 Olypsys Technologies Ltd. All rights reserved.
 #
 
 import os
@@ -306,7 +306,7 @@ f"""///
     if file_type == FileType.JAVA or file_type == FileType.KOTLIN:
         expected_header = (
 f"""///
-/// Copyright (c) 2023 Olypsys Technologies Ltd. All rights reserved.
+/// Copyright (c) {year} Olypsys Technologies Ltd. All rights reserved.
 ///
 /// This file is part of the Olypsys Android App.
 ///
@@ -321,7 +321,7 @@ f"""///
     if file_type == FileType.SWIFT:
         expected_header = (
 f"""///
-/// Copyright (c) 2023 Olypsys Technologies Ltd. All rights reserved.
+/// Copyright (c) {year} Olypsys Technologies Ltd. All rights reserved.
 ///
 /// This file is part of the Olypsys iOS App.
 ///
